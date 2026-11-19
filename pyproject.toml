@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ragpipekit"
+version = "0.1.0"
+description = "Zero-config, lightweight RAG pipelines in 3 lines of Python."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Bala Sai Boppana", email = "saiboppana3@gmail.com" }
+]
+keywords = ["rag", "llm", "retrieval", "embeddings", "faiss", "nlp", "ai", "search"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: General",
+]
+dependencies = [
+    "numpy>=1.20.0",
+]
+
+[project.optional-dependencies]
+faiss = ["faiss-cpu>=1.7.0"]
+tfidf = ["scikit-learn>=1.0.0"]
+transformers = ["sentence-transformers>=2.2.0"]
+openai = ["openai>=1.0.0"]
+all = [
+    "faiss-cpu>=1.7.0",
+    "scikit-learn>=1.0.0",
+    "sentence-transformers>=2.2.0",
+    "openai>=1.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/bala11836/ragpipekit"
+Repository = "https://github.com/bala11836/ragpipekit"
+Issues = "https://github.com/bala11836/ragpipekit/issues"
